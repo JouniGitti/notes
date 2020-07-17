@@ -6,6 +6,7 @@ import Notification from './components/notification'
 import Footer from './components/footer'
 
 // to start the json-server acting as a db server: npx json-server --port=3001 --watch db.json
+// to start the node server: npm run dev (win cmd open in the directory)
 // to start the app: npm start
 
 const App = () => {
