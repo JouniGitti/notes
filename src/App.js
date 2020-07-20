@@ -42,7 +42,7 @@ const App = () => {
   }
 
   const toggleImportanceOf = (id) =>{
-    const url = `http://localhost:3001/notes/${id}`
+    // const url = `http://localhost:3001/notes/${id}`
     const note = notes.find(n => n.id === id)
     const changedNote = { ...note, important: !note.important }
 
@@ -62,7 +62,6 @@ const App = () => {
   } 
 
   const handleNoteChange = (event) => {
-    console.log(event.target.value)
     setNewNote(event.target.value)
   }
   
@@ -99,29 +98,4 @@ const App = () => {
   )
 }
 
-export default App 
-
-
-  // tai hook toisessa järjestyksessä:
-
-  // const hook = () => {
-  //   console.log('effect')
-  //   axios
-  //     .get('http://localhost:3001/notes')
-  //     .then(response => {
-  //       console.log('promise fulfilled')
-  //       setNotes(response.data)
-  //     })
-  // }
-  // useEffect(hook, [])
-  // console.log('render', notes.length, 'notes')
-
-  // useEffect(() => {
-  //   console.log('effect')
-  //   const eventHandler = response => {
-  //     console.log('promise fulfilled')
-  //     setNotes(response.data)
-  //   }
-  //   const promise = axios.get('http://localhost:3001/notes')
-  //   promise.then(eventHandler)
-  // }, [])
+export default App
